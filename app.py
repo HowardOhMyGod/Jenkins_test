@@ -17,12 +17,8 @@ def hello():
 
     html = "<h3>Hello {name}!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>" \
-           "<b>Visits:</b> {visits}" \
-           "<p>This is second build</p>" \
-           "<h3> Thrid Build !!! </h3>" \
-           "<h3> Forth Build !!! </h3>" \
-           "<h3> Five Build !!! </h3>" \
-           "<h3> Six build !!! </h3>"
+           "<b>Visits:</b> {visits}"
+
     return html.format(name=os.getenv("NAME", "world"), hostname=socket.gethostname(), visits=visits)
 
 if __name__ == "__main__":
